@@ -51,3 +51,27 @@ TranXend is a dating platform tailored for the transgender community, focusing o
    ```bash
    git clone https://github.com/your-username/TranXend-App.git
    cd TranXend-App
+
+
+
+Backend Setup
+cd backend
+npm install
+npm run dev
+
+
+
+Frontend Setup
+
+cd frontend
+npm install
+npm run start
+
+
+
+Contributing
+
+We welcome contributions to improve the TranXend platform. Please follow our guidelines for submitting issues and pull requests.
+
+
+
