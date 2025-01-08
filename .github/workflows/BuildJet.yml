@@ -1,0 +1,31 @@
+
+name: Test Suite
+
+on: push
+
+jobs:
+  test:
+    runs-on: buildjet-4vcpu-ubuntu-2204
+    name: Test
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: buildjet/setup-node@v1
+        with:
+          node-version: '14'
+
+      - name: Cache Node.js dependencies
+        uses: buildjet/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
