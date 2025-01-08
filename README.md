@@ -47,31 +47,76 @@ TranXend is a dating platform tailored for the transgender community, focusing o
 
 ### Setup Instructions
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-username/TranXend-App.git
-   cd TranXend-App
-
-
+#### Clone the Repository
+```bash
+git clone https://github.com/your-username/TranXend-App.git
+cd TranXend-App
 
 Backend Setup
+
+    Navigate to the backend directory:
+    bash
+
 cd backend
+
+Install dependencies:
+bash
+
 npm install
-npm run dev
 
+Set up the PostgreSQL database:
 
+    Create a new PostgreSQL database.
+    Update the database configuration in backend/config/config.json to match your PostgreSQL setup.
+
+Start the backend server:
+bash
+
+    npm run dev
+
+    If you encounter issues, ensure that your PostgreSQL server is running and the credentials in the configuration file are correct.
 
 Frontend Setup
 
+    Navigate to the frontend directory:
+    bash
+
 cd frontend
+
+Install dependencies:
+bash
+
 npm install
-npm run start
 
+Set up Firebase for notifications:
 
+    Follow the Firebase setup instructions to create a new project.
+    Download the google-services.json file for Android and GoogleService-Info.plist file for iOS.
+    Place these files in the appropriate directories (android/app for google-services.json and ios for GoogleService-Info.plist).
+
+Start the frontend application:
+bash
+
+    npm run start
+
+    If you encounter issues, ensure that you have the correct Firebase configurations and that your mobile device or emulator is properly set up.
+
+Troubleshooting Tips
+
+    Backend Issues:
+        Ensure the PostgreSQL server is running.
+        Check the database connection configuration in backend/config/config.json.
+        Verify that all necessary environment variables are set.
+
+    Frontend Issues:
+        Ensure you have the correct versions of Node.js, React Native CLI, and other dependencies.
+        Verify your Firebase setup and configurations.
+        Check the emulator or device setup for compatibility issues.
 
 Contributing
 
-We welcome contributions to improve the TranXend platform. Please follow our guidelines for submitting issues and pull requests.
+We welcome contributions to improve the TranXend platform. Please follow our contributing guidelines for submitting issues and pull requests.
+License
 
-
-
+This project is licensed under the MIT License - see the LICENSE file for details.
+Code
